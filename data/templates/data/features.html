@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Info Box</title>
+    <style>
+        .info-box {
+            border: 2px solid #4CAF50;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .info-box:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .info-box h2 {
+            color: #4CAF50;
+        }
+        .info-box p {
+            color: #333;
+        }
+        .info-box button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .info-box button:hover {
+            background-color: #45a049;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background-color: #939090;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        nav ul li a:hover {
+            text-shadow: 0 0 10px rgba(255,255,255,0.8);
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="{% url 'data:home' %}">Home</a></li>
+            <li><a href="{% url 'data:features' %}">Upcoming Features</a></li>
+        </ul>
+    </nav>    
+    <div class="info-box" style="margin-top: 10%;">
+        <h2>upcoming</h2>
+        <p>currently we have made the seismic data converstion completely working onl for 5 lakh data from lunar trainging data but 
+            due to time constrains we completed only 75% mars data also the date time alignment is not made 100%a accurate due to same
+            reason we will be modifying it soon. We also plan to make melodies using this data and machine learning to arrange them 
+            into groups and order the values for particular tone. 
+        </p>
+
+    </div>
+</body>
+</html>
