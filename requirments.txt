@@ -1,0 +1,5 @@
+numpy
+pandas
+obsy
+csv
+datetime
