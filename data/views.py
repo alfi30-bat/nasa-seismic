@@ -1,20 +1,16 @@
 from django.shortcuts import render
 
 # Create your views here.
-import numpy as np
+#import numpy as np
 import pandas as pd
-from obspy import read
-from datetime import datetime, timedelta
-import matplotlib.pyplot as plt
 import os, csv
 import json
-from decimal import Decimal
+
 
 cat_directory = '../data/lunar/training/catalogs/'
 cat_file = cat_directory + 'apollo12_catalog_GradeA_final.csv'
 cat = pd.read_csv(cat_file)
 data = []
-
 
 def moon_data(request):
     # Initialize an empty dictionary, list, and row counter
