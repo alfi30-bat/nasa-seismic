@@ -1,3 +1,4 @@
 # nasa-seismic
 install django, python 
-enter the folder containing manage.py and type: pythonmange.py runserver
+
+navigate to the folder containing manage.py and type: python mange.py runserver
